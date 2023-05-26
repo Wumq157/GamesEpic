@@ -6,8 +6,8 @@ document.write(`
   <meta charset="UTF-8">
   <title>GamesEpic</title>
   <link rel="shortcut icon" href="https://i.imgur.com/7KwrsKR.png">
-  <link rel="stylesheet" href="../config/reset.css">
-  <link rel="stylesheet" href="../config/style.css">
+  <link rel="stylesheet" href="config/reset.css">
+  <link rel="stylesheet" href="config/style.css">
 </head>
 
 <body>
