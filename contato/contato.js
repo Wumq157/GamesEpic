@@ -1,25 +1,28 @@
-document.getElementById('myForm').addEventListener('submit', function(event) {
-    event.preventDefault(); // Evita o comportamento padrão de recarregar a página após o envio do formulário
-    
-    // Obtém os dados do formulário
-    var nome = document.getElementById('nome').value;
-    var email = document.getElementById('email').value;
-    var telefone = document.getElementById('fone').value;
-    var mensagem = document.getElementById('msm').value;
-    var contato = document.querySelector('input[name="contato"]:checked').value;
-    var horario = document.querySelector('select[name="horario"]').value;
-    var receberNovidades = document.getElementById('novidades').checked ? 'Sim' : 'Não';
-    
-    // Abre uma nova janela com as informações enviadas
-    var novaJanela = window.open('', '_blank');
-    novaJanela.document.write('<h2>Dados do Formulário</h2>');
-    novaJanela.document.write('<p>Nome: ' + document.createTextNode(nome).textContent + '</p>');
-    novaJanela.document.write('<p>Email: ' + document.createTextNode(email).textContent + '</p>');
-    novaJanela.document.write('<p>Telefone: ' + document.createTextNode(telefone).textContent + '</p>');
-    novaJanela.document.write('<p>Mensagem: ' + document.createTextNode(mensagem).textContent + '</p>');
-    novaJanela.document.write('<p>Contato preferido: ' + document.createTextNode(contato).textContent + '</p>');
-    novaJanela.document.write('<p>Horário preferido: ' + document.createTextNode(horario).textContent + '</p>');
-    novaJanela.document.write('<p>Gostaria de receber novidades por email? ' + document.createTextNode(receberNovidades).textContent + '</p>');
-    novaJanela.document.close();
-  });
-  
+document.getElementById('myForm').addEventListener('submit', function (event) {
+  event.preventDefault();
+
+  var nome = sanitizeHTML(document.getElementById('nome').value);
+  var email = sanitizeHTML(document.getElementById('email').value);
+  var telefone = sanitizeHTML(document.getElementById('fone').value);
+  var mensagem = document.getElementById('msm').value; // Campo de mensagem vulneravel a ataques XSS
+  var contato = sanitizeHTML(document.querySelector('input[name="contato"]:checked').value);
+  var horario = sanitizeHTML(document.querySelector('select[name="horario"]').value);
+  var receberNovidades = document.getElementById('novidades').checked ? 'Sim' : 'Não';
+
+  var novaJanela = window.open('', '_blank');
+  novaJanela.document.write('<h2>Dados do Formulário</h2>');
+  novaJanela.document.write('<p>Nome: ' + nome + '</p>');
+  novaJanela.document.write('<p>Email: ' + email + '</p>');
+  novaJanela.document.write('<p>Telefone: ' + telefone + '</p>');
+  novaJanela.document.write('<p>Mensagem: ' + mensagem + '</p>'); // Campo de mensagem vulneravel a ataques XSS
+  novaJanela.document.write('<p>Contato preferido: ' + contato + '</p>');
+  novaJanela.document.write('<p>Horário preferido: ' + horario + '</p>');
+  novaJanela.document.write('<p>Gostaria de receber novidades por email? ' + receberNovidades + '</p>');
+  novaJanela.document.close();
+});
+
+function sanitizeHTML(value) {
+  var element = document.createElement('div');
+  element.innerText = value;
+  return element.innerHTML;
+}
