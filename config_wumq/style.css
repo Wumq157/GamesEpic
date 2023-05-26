@@ -65,7 +65,7 @@ aside {
   width: 200px;
   position: fixed;
   top: 0;
-  left: -200px;
+  left: -215px;
   height: 100%;
   max-height: calc(100% - 40px); /* altura máxima com margem superior e inferior */
   overflow-y: auto; /* permitir rolagem vertical */
