@@ -1,0 +1,160 @@
+/* Estilos gerais */
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  background-color: #333
+}
+
+.container {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: flex-start;
+  margin: 20px;
+}
+
+/* Estilos do cabeçalho */
+header {
+  background-color: #333;
+  color: #fff;
+}
+
+header h1 {
+  margin: 0;
+  padding-left: 25px; 
+}
+header p {
+  padding-left: 25px; 
+}
+header img {
+  width: 100%;
+  height: 276px;
+}
+
+/* Estilos da barra lateral */
+aside::after {
+  content: "";
+  position: absolute;
+  top: 50%;
+  right: -10px;
+  width: 0;
+  height: 0;
+  border-top: 10px solid transparent;
+  border-bottom: 10px solid transparent;
+  border-left: 10px solid #160025;
+  transform: translateY(-50%);
+  border-radius: 0 0 5px 5px;
+}
+
+aside::before {
+  content: "";
+  position: absolute;
+  top: 50%;
+  right: -5px;
+  width: 15px;
+  height: 80px;
+  background-color: #333;
+  transform: translateY(-50%);
+  border-radius: 50%;
+}
+
+aside {
+  background-color: #eee;
+  overflow-y: hidden;
+  padding: 20px;
+  width: 200px;
+  position: fixed;
+  top: 0;
+  left: -200px;
+  height: 100%;
+  max-height: calc(100% - 40px); /* altura máxima com margem superior e inferior */
+  overflow-y: auto; /* permitir rolagem vertical */
+  transition: left 0.3s ease-in-out;
+}
+
+aside:hover {
+  left: 0;
+}
+
+aside ul {
+  list-style-type: none;
+  padding: 0;
+}
+
+aside li {
+  margin-bottom: 10px;
+}
+
+aside a {
+  text-decoration: none;
+  color: #333;
+text-align: center;
+}
+.menu { /* Botões da barra lateral.*/
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.btn {
+  display: inline-block;
+  padding: 10px 20px;
+  background-color: #333;
+  border-radius: 20px;
+  color: #fff;
+  text-decoration: none;
+  font-weight: bold;
+  transition: background-color 0.2s ease;
+  margin-right: 10px;
+}
+
+.btn:hover {
+  background-color: #fff;
+  color: #333;
+}
+.btn:active{
+  border-color: rgb(52, 21, 75);
+}
+/* Estilos da seção principal */
+main {
+  flex: 1;
+  margin-left: 25px;
+  padding: 20px;
+background-color: #ccc;
+
+}
+
+main h2 {
+text-align: center;
+margin-top: 0;
+}
+p {
+text-align: center;
+padding-top: 15px;
+}
+
+main img {
+  max-width: 100%;
+  height: auto;
+display: block;
+margin: 0 auto;
+}
+.videos {
+list-style: none;
+margin: 0;
+padding: 0;
+margin-left: 30px;
+}
+
+/* Estilos do rodapé */
+footer {
+  background-color: #333;
+  color: #fff;
+  padding: 20px;
+  text-align: center;
+}
+
+/* Barra de rolagem */
+  ::-webkit-scrollbar {
+  display: none;
+}
