@@ -21,7 +21,7 @@ document.write(`
   <aside>
     <img src="https://i.imgur.com/oUxMyMk.png">
     <ul class="menu">
-    < !-- <li><a href="login.html" class="btn">Conta⚙️</a></li> -->
+    <!-- <li><a href="login.html" class="btn">Conta⚙️</a></li> -->
       <li><a href="index.html" class="btn">Início</a></li>
       <li><a href="jogos.html" class="btn">Jogos🎮</a></li>
       <li><a href="Clips.html" class="btn">Clips📷</a></li>
@@ -31,7 +31,7 @@ document.write(`
       <li><a href="#" class="btn">SoonComing</a></li>
       <li><a href="#" class="btn">SoonComing</a></li>
       <li><a href="contato.html" class="btn">Contato📞</a></li>
-      < !-- <li><a href="suporte.html" class="btn">Suporte!</a></li> -->
+      <!-- <li><a href="suporte.html" class="btn">Suporte!</a></li> -->
     </ul>
   </aside>
 
