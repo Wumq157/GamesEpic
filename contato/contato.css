@@ -1,6 +1,12 @@
 main {
     margin-left: 20px;
 }
+
+.protudos li {
+    border: none;
+
+}
+
 main li {
     display: inline-block;
     text-align: center;
