@@ -1,5 +1,5 @@
-var peso = 95
-var altura = 1.80
+var peso = window.prompt("Diga qual o seu peso:")
+var altura = window.prompt("Dga qual a sua Altura:")
 var altura2 = altura ** 2
 var imc = peso % altura
 
