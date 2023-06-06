@@ -27,7 +27,7 @@ document.write(`
       <li><a href="Clips.html" class="btn">Clips📷</a></li>
       <li><a href="loja.html" class="btn">Loja👜</a></li>
       <li><a href="luan.html" class="btn">Parcerias</a></li>
-      <li><a href="#" class="btn">SoonComing</a></li>
+      <li><a href="imc.html" class="btn">Saúde.</a></li>
       <li><a href="#" class="btn">SoonComing</a></li>
       <li><a href="#" class="btn">SoonComing</a></li>
       <li><a href="contato.html" class="btn">Contato📞</a></li>
