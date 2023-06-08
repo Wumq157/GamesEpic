@@ -1,6 +1,8 @@
 .tabela {
     background-color: #F0F0F0;
-    padding: 10px;
+    padding: 20px;
+    border-radius: 20px;
+    border-color: #252525;
   }
   
   table {
