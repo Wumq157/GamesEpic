@@ -28,7 +28,7 @@ document.write(`
       <li><a href="loja.html" class="btn">Loja👜</a></li>
       <li><a href="luan.html" class="btn">Parcerias</a></li>
       <li><a href="imc.html" class="btn">Saúde⚕️</a></li>
-      <li><a href="#" class="btn">SoonComing</a></li>
+      <li><a href="https://wumq157.github.io/gamesepicv2/" class="btn">GamesEpic<br>2.0</a></li>
       <li><a href="#" class="btn">SoonComing</a></li>
       <li><a href="contato.html" class="btn">Contato📞</a></li>
       <!-- <li><a href="suporte.html" class="btn">Suporte!</a></li> -->
