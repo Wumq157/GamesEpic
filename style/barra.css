@@ -1,0 +1,152 @@
+/* The switch - the box around the slider */
+.switch {
+  font-size: 17px;
+  position: relative;
+  display: inline-block;
+  width: 3.5em;
+  height: 2em;
+  left: 150;
+  top: 20;
+  transform: rotate(90deg);
+}
+
+/* Hide default HTML checkbox */
+.switch input {
+  opacity: 0;
+  width: 0;
+  height: 0;
+}
+
+/* The slider */
+.sidebar {
+  background-color: #8b8b8b;
+  color: #000;
+  width: 200px;
+  height: 100vh; /* Alterada a altura para 100vh */
+  position: fixed;
+  top: 0; /* Alterada a posição para topo (0) */
+  transition: left 0.3s ease-in-out;
+  border-top-right-radius: 20px;
+  z-index: 11;
+}
+
+
+.slider:before {
+  position: absolute;
+  content: "";
+  height: 1.4em;
+  width: 1.4em;
+  left: 0.3em;
+  bottom: 0.3em;
+  background-color: white;
+  border-radius: 50px;
+  box-shadow: 0 0px 20px rgba(0,0,0,0.4);
+  transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+}
+
+.switch input:checked + .slider {
+  background: #b84fce;
+}
+
+.switch input:focus + .slider {
+  box-shadow: 0 0 1px #b84fce;
+}
+
+.switch input:checked + .slider:before {
+  transform: translateX(1.6em);
+  width: 2em;
+  height: 2em;
+  bottom: 0;
+}
+
+/* Rest of the CSS styles */
+
+.sidebar {
+  background-color: rgb(17, 17, 17);
+  color: #fff;
+  width: 200px;
+  height: 100%;
+  position: fixed;
+  left: -200px;
+  transition: left 0.3s ease-in-out;
+  border-top-right-radius: 20px;
+}
+button {
+  margin:  40px;
+}
+
+.sidebar.open {
+  left: 0;
+}
+
+.toggle-button {
+  display: none;
+}
+
+.menu {
+  list-style: none;
+  padding: 20px;
+  margin-top: 40px;
+}
+
+.menu li {
+  margin-bottom: 25px;
+}
+
+.menu a {
+  text-decoration: none;
+  color: #fff;
+  text-align: center;
+}
+
+@media (max-width: 768px) {
+  .sidebar.open {
+    left: 0;
+    width: 200px;
+  }
+
+  .toggle-button {
+    display: block;
+    width: 30px;
+    height: 30px;
+    background-color: #333;
+    border: none;
+    cursor: pointer;
+    position: absolute;
+    top: 25px;
+    right: 5px;
+    transform: translateY(-50%);
+    border-radius: 20px;
+  }
+
+  .toggle-button::before,
+  .toggle-button::after {
+    content: "";
+    position: absolute;
+    background-color: #fff;
+    height: 2px;
+    width: 16px;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+  }
+
+  .toggle-button::before {
+    transform: translate(-50%, -50%) rotate(45deg);
+  }
+
+  .toggle-button::after {
+    transform: translate(-50%, -50%) rotate(-45deg);
+  }
+
+  .menu {
+    margin-top: 0;
+  }
+
+  .toggle-button::before,
+  .toggle-button::after {
+    background-color: #333;
+  }
+}
+
+

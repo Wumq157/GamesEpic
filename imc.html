@@ -1,12 +1,38 @@
-<meta charset="UTF-8">
-<link rel="stylesheet" href="imc/imc.css">
-<script src="head.js"></script>
-<h2>Está é uma parte da pagina onde gamers gordos ou não gordos pode verificar seu estádo de saúde.</h2>
+<title>Saúde</title>
+<script src="js/html.js"></script>
+<script>
+var url = `https://files.tecnoblog.net/wp-content/uploads/2021/08/roblox.jpg`
+var sHeader = `<h2>Olá <span class="nome"></span></h2>
+`
+var meuConteudo = `
+<link rel="stylesheet" href="style/imc.css">
+<h2>Está é uma parte da pagina onde gamers gordos ou não gordos pode verificar seu estado de saúde.</h2>
 <div class="imc">
     <h3>Verifique o Seu IMC</h3>
     
 
 </div>
+<div class="imcForm">
+  <form id="imcForm">
+    <label for="altura">Altura</label>
+    <input type="text" id="altura" class="input" required>
+
+    <label for="peso">Peso</label>
+    <input type="text" id="peso" class="input" required>
+    
+
+
+</form>
+<button id="submit-button" type="submit">
+    <span class="circle1"></span>
+    <span class="circle2"></span>
+    <span class="circle3"></span>
+    <span class="circle4"></span>
+    <span class="circle5"></span>
+    <span class="text">Calcular</span>
+</button>
+  </div>
+  <p class="imcValue"><span id="imcValue"></span></p>
 <div class="tabela">
     <table>
       <thead>
@@ -43,8 +69,13 @@
       </tbody>
     </table>
   </div>
+ 
   
-<script src="imc/imc.js"></script>
+`;
 
+adicionarConteudoPrincipal(meuConteudo);
 
-<script src="footer.js"></script>
+</script>
+<script src="js/script.js"></script>
+<script src="js/imc.js"></script>
+<script src="js/usuario.js"></script>
