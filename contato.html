@@ -1,14 +1,6 @@
-<title>Contato</title>
-<script src="js/html.js"></script>
-<script>
-  var url = `https://files.tecnoblog.net/wp-content/uploads/2021/08/roblox.jpg`
-  var sHeader = `<h2>Olá <span class="nome"></span></h2>
-  
-`
-
-  var meuConteudo = `
-<link rel="stylesheet" href="style/contato.css">
-
+<meta charset="UTF-8">
+<link rel="stylesheet" href="contato/contato.css">
+<script src="head.js"></script>
 <ul>
   <li>
     <div class="rede">
@@ -26,13 +18,13 @@
       <h2>Contato</h2>
       <form id="myForm">
         <label for="nome">Nome</label>
-        <input type="text" id="nome" class="input" required>
+        <input type="text" id="nome" class="ip" required>
 
         <label for="email">Email</label>
-        <input type="email" id="email" class="input" required placeholder="seuEmail@gmail.com">
+        <input type="email" id="email" class="ip" required placeholder="seuEmail@gmail.com">
 
         <label for="fone">Telefone</label>
-        <input type="number" id="fone" class="input" placeholder="(XX) XXXXX-XXXX">
+        <input type="number" id="fone" class="ip" placeholder="(XX) XXXXX-XXXX">
 
         <label for="msm">Mensagem que desejam enviar.</label>
         <textarea cols="70" lang="60" id="msm"></textarea>
@@ -55,20 +47,16 @@
 
         <label><input type="checkbox" class="checkbox" id="novidades" checked> Gostaria de receber nossas novidades
           em seu Email?</label>
-        <button class="enviar" id="submit-button" type="submit">Enviar Formulário</button>
+        <button class="enviar" type="submit">Enviar Formulário</button>
 
       </form>
     </div>
   </li>
 </ul>
 
-  `;
 
-  adicionarConteudoPrincipal(meuConteudo);
-
-
+<script src="contato/contato.js">
 
 </script>
-<script src="js/script.js"></script>
-<script src="js/contato.js"></script>
-<script src="js/usuario.js"></script>
+
+<script src="footer.js"></script>
